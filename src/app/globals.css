@@ -10,30 +10,6 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--background); color: var(--foreground); }
 a { color: inherit; text-decoration: none; }
 
-.me-hero {
-  background-image:
-    linear-gradient(90deg, rgba(7,11,15,.96) 0%, rgba(7,11,15,.86) 42%, rgba(7,11,15,.36) 72%, rgba(7,11,15,.62) 100%),
-    url("https://images.unsplash.com/photo-1776090188130-26c7253ff423?auto=format&fit=crop&fm=jpg&q=75&w=2400");
-  background-size: cover;
-  background-position: center;
-}
-
-.me-workshop {
-  background-image:
-    linear-gradient(to top, rgba(6,9,12,.9), rgba(6,9,12,.08) 55%),
-    url("https://images.unsplash.com/photo-1764114441123-586d13fc6ece?auto=format&fit=crop&fm=jpg&q=75&w=1800");
-  background-size: cover;
-  background-position: center;
-}
-
-@media (max-width: 900px) {
-  .me-hero {
-    background-image:
-      linear-gradient(rgba(7,11,15,.84), rgba(7,11,15,.9)),
-      url("https://images.unsplash.com/photo-1776090188130-26c7253ff423?auto=format&fit=crop&fm=jpg&q=70&w=1600");
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
