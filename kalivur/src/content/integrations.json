@@ -1,0 +1,11 @@
+{
+  "intranet": {
+    "url": "https://staging-api.kalivur.com/portal",
+    "environment": "staging"
+  },
+  "payments": {
+    "enabled": false,
+    "provider": "",
+    "checkoutUrl": ""
+  }
+}
