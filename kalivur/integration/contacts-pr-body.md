@@ -1,0 +1,5 @@
+Adds a disabled-by-default, write-only registration endpoint at `/website/public/contacts` for the Kalivur website. It stores new contacts using Luri's existing tenant-scoped identity hash and encryption, and leaves existing or archived contacts unchanged when visitors repeat a registration. Browser requests cannot select the tenant or read existing contact details.
+
+No database migration is required. The staging rollout guide documents the organization UUID, explicit origin allowlist and activation variables. Deployment and a real staging database/portal verification remain pending access; this PR does not activate production or send WhatsApp messages.
+
+Validation: 9 new tests passed using a temporary database, covering encrypted persistence, duplicates, tenant separation, rejected requests and rollback on commit failure. Ruff, Black and mypy passed for the new backend code/tests. Website form TypeScript and ESLint checks passed separately. Broader contact, inbound and portal regression checks completed: 25 passed and 1 skipped (275 seconds).

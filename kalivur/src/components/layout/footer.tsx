@@ -1,0 +1,6 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { siteConfig } from "@/content/site";
+import { Container } from "./container";
+export function Footer() { const pathname = usePathname(); if (pathname === "/site" || pathname.startsWith("/site/")) return null; return <footer className="border-t border-[var(--border)] py-12"><Container><div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]"><div><Link href="/" className="wordmark">KALIVUR<span>.</span></Link><p className="mt-4 max-w-xs text-sm leading-6 text-[var(--muted)]">Tecnología aplicada para que tu empresa avance con más claridad y continuidad.</p></div><div><p className="footer-title">Navegación</p>{siteConfig.navigation.map(x => <Link className="footer-link" href={x.href} key={x.href}>{x.label}</Link>)}</div><div><p className="footer-title">Soluciones</p><Link className="footer-link" href="/luri">Luri</Link><Link className="footer-link" href="/site">Kalivur Site</Link><Link className="footer-link" href="/contacto">Contacto</Link></div></div><p className="mt-12 border-t border-[var(--border)] pt-6 text-xs text-[var(--muted)]">© {new Date().getFullYear()} Kalivur. Todos los derechos reservados.</p></Container></footer>; }
